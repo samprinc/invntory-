@@ -23,7 +23,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-dev-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://invntory-9lkz.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://invntory-9lkz.onrender.com' , '*']
 
 # Application definition
 INSTALLED_APPS = [
