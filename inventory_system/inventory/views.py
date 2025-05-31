@@ -7,7 +7,6 @@ from .forms import ProductForm, SaleForm
 from django.contrib.auth.views import LoginView
 
 
-@login_required
 def dashboard(request):
     products = Product.objects.all()
     sales = Sale.objects.order_by('-sold_at')[:5]
