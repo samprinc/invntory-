@@ -14,7 +14,6 @@ def dashboard(request):
 
 from django.contrib import messages
 
-@login_required
 def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST)
@@ -26,7 +25,6 @@ def add_product(request):
         form = ProductForm()
     return render(request, 'inventory/add_product.html', {'form': form})
 
-@login_required
 def make_sale(request):
     if request.method == 'POST':
         form = SaleForm(request.POST)
@@ -41,7 +39,7 @@ def make_sale(request):
 
     return render(request, 'inventory/make_sale.html', {'form': form})
 
-@login_required
+
 def account(request):
     return render(request, 'inventory/account.html')
 
